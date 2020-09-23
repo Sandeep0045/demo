@@ -2,7 +2,7 @@
 
   agent any
   environment {
-     TF_VAR_okta_group_name=okta_group_name
+     TF_VAR_okta_group_name=var.okta_group_name
 }
 
   parameters {
