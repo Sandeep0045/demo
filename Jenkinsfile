@@ -8,13 +8,13 @@
   parameters {
       string(name: 'okta_group_name', defaultValue: 'xxx', )
 
-    
+  }
   stages {
 
     stage('TF Plan') {
       steps {
           sh 'terraform init'
-          sh 'terraform plan -var okta_api_token=${params.okta_api_token}'
+          sh 'terraform plan -out myplan'
         }
       }
 
